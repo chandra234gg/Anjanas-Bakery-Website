@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Anjana's Bakery"
+description = "A warm, mobile-first bakery website for browsing vegan cakes, exploring customization options, and ordering directly through WhatsApp or phone."
+version = "1.0.0"
+id = "artifacts/anjanas-bakery"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 26089
+
+[services.development]
+run = "pnpm --filter @workspace/anjanas-bakery run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/anjanas-bakery", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/anjanas-bakery/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "26089"
+BASE_PATH = "/"
