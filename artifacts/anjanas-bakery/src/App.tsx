@@ -27,7 +27,7 @@ const queryClient = new QueryClient();
 
 // Gallery image URLs live here so real cake photography can replace the illustrated placeholders in one place.
 const GALLERY_IMAGES = [
-  { title: 'Buttercream blush', note: 'soft, swirly, and made for a birthday', src: '/anjanas-cake-buttercream.svg' },
+  { title: 'Butterscotch', note: 'soft, swirly, and made for a birthday', src: '/butterscotch-cake.png' },
   { title: 'Strawberry daydream', note: 'a little pink, a lot of joy', src: '/anjanas-cake-strawberry.svg' },
   { title: 'Blueberry cloud', note: 'quietly pretty with a fresh finish', src: '/anjanas-cake-blueberry.svg' },
   { title: 'Red velvet love', note: 'the classic, made completely vegan', src: '/anjanas-cake-red-velvet.svg' },
